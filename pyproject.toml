@@ -1,0 +1,14 @@
+[project]
+name = "fssutf-unicode-predicate-utils"
+version = "0.1.0"
+description = "Checks whether a value is valid UTF-8 according to the Unicode FSS-UTF scheme."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
