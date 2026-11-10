@@ -52,3 +52,10 @@ given as ``bytes``, ``bytearray``, or ``str`` of byte ordinals. Raises
 - ``FSSUTFError`` — a ``ValueError`` subclass with an ``offset`` attribute,
 provided for callers that want to raise a typed error from their own
 validation code.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
